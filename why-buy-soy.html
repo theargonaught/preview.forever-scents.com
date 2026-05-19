@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Why buy a soy candle? Learn the benefits of soy wax over paraffin — cleaner burn, longer lasting, eco-friendly, and made in the USA.">
+  <title>Why Buy Soy? – Forever Scents</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .benefit-card {
+      padding: 1.75rem 1.5rem;
+      display: flex;
+      gap: 1.25rem;
+      align-items: flex-start;
+    }
+    .benefit-icon {
+      font-size: 2rem;
+      line-height: 1;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .benefit-card h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+    .benefit-card p {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+      margin-top: 1.5rem;
+    }
+    .compare-table th {
+      background: var(--grad);
+      color: var(--white);
+      padding: 0.85rem 1rem;
+      text-align: left;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    .compare-table th:first-child { border-radius: var(--radius) 0 0 0; }
+    .compare-table th:last-child  { border-radius: 0 var(--radius) 0 0; }
+    .compare-table td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid var(--pale);
+      color: var(--muted);
+      vertical-align: top;
+    }
+    .compare-table tr:last-child td { border-bottom: none; }
+    .compare-table td:first-child { color: var(--deep); font-weight: 600; }
+    .compare-table .check { color: var(--violet); font-weight: 700; }
+    .compare-table .cross { color: #c0392b; }
+    .compare-table tr:nth-child(even) td { background: var(--off-white); }
+
+    .cta-band {
+      background: var(--grad);
+      padding: 3rem 1.25rem;
+      text-align: center;
+      color: var(--white);
+    }
+    .cta-band h2 {
+      color: var(--white);
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      margin-bottom: 0.75rem;
+    }
+    .cta-band p {
+      color: rgba(255,255,255,0.75);
+      margin-bottom: 1.5rem;
+      font-size: 0.93rem;
+    }
+  </style>
+</head>
+<body class="page-body">
+
+  <div class="page-hero">
+    <h1>Why Buy a <em style="color:var(--gold-lt);">Soy</em> Candle?</h1>
+    <p>Not all candles are created equal. Here's why soy wax makes a real difference for your home, your health, and the planet.</p>
+  </div>
+
+  <!-- BENEFITS GRID -->
+  <section class="content-section bg-white">
+    <div class="content-inner-wide">
+      <div class="grid-2">
+
+        <div class="card benefit-card">
+          <span class="benefit-icon">🌱</span>
+          <div>
+            <h3>100% Natural &amp; Renewable</h3>
+            <p>Soy wax is made from soybeans grown right here in the USA. It's a completely renewable resource — unlike paraffin, which is a petroleum byproduct.</p>
+          </div>
+        </div>
+
+        <div class="card benefit-card">
+          <span class="benefit-icon">🏭</span>
+          <div>
+            <h3>Supports American Farmers</h3>
+            <p>Every soy candle you buy puts money back into American agriculture. Soybeans are one of the biggest crops in the Midwest — we're proud to use them.</p>
+          </div>
+        </div>
+
+        <div class="card benefit-card">
+          <span class="benefit-icon">🌍</span>
+          <div>
+            <h3>Naturally Biodegradable</h3>
+            <p>Soy wax is biodegradable and water soluble, making cleanup easy and keeping your environmental footprint small.</p>
+          </div>
+        </div>
+
+        <div class="card benefit-card">
+          <span class="benefit-icon">🫁</span>
+          <div>
+            <h3>Non-Toxic &amp; Clean Burning</h3>
+            <p>Paraffin releases toxic benzene and toluene when burned. Soy wax is non-toxic and produces 90% less soot — a big deal if you have kids, pets, or allergies.</p>
+          </div>
+        </div>
+
+        <div class="card benefit-card">
+          <span class="benefit-icon">⏱️</span>
+          <div>
+            <h3>Burns Up to 50% Longer</h3>
+            <p>Soy burns at a cooler temperature, which means a slower, more even burn. Our 9 oz candles burn for 40–50 hours. You get more value for your money.</p>
+          </div>
+        </div>
+
+        <div class="card benefit-card">
+          <span class="benefit-icon">🌸</span>
+          <div>
+            <h3>Wonderful Scent Throw</h3>
+            <p>Soy wax holds fragrance beautifully and releases it evenly throughout the burn — no overpowering burst at the start and nothing at the end.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARISON TABLE -->
+  <section class="content-section bg-pale">
+    <div class="content-inner">
+      <div class="section-center" style="margin-bottom:1.5rem;">
+        <span class="section-label">Side by Side</span>
+        <h2 class="section-title">Soy vs. <em>Paraffin</em></h2>
+      </div>
+      <div style="overflow-x:auto; border-radius:var(--radius); border: 1px solid rgba(61,31,110,0.1);">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>🌿 Soy Wax</th>
+              <th>Paraffin Wax</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Source</td>
+              <td class="check">✔ American soybeans</td>
+              <td class="cross">✖ Petroleum byproduct</td>
+            </tr>
+            <tr>
+              <td>Toxicity</td>
+              <td class="check">✔ Non-toxic</td>
+              <td class="cross">✖ Releases benzene &amp; toluene</td>
+            </tr>
+            <tr>
+              <td>Soot</td>
+              <td class="check">✔ 90% less soot</td>
+              <td class="cross">✖ Heavy black soot</td>
+            </tr>
+            <tr>
+              <td>Burn time</td>
+              <td class="check">✔ Burns up to 50% longer</td>
+              <td class="cross">✖ Burns faster</td>
+            </tr>
+            <tr>
+              <td>Biodegradable</td>
+              <td class="check">✔ Yes — water soluble</td>
+              <td class="cross">✖ No</td>
+            </tr>
+            <tr>
+              <td>Scent throw</td>
+              <td class="check">✔ Even, consistent</td>
+              <td>Variable</td>
+            </tr>
+            <tr>
+              <td>Burn temperature</td>
+              <td class="check">✔ Cooler, safer</td>
+              <td class="cross">✖ Hotter</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta-band">
+    <h2>Ready to make the switch?</h2>
+    <p>Browse our full collection of handmade soy candles and wax melts — over 60 fragrances to choose from.</p>
+    <a href="order-online.html" class="btn btn-gold">Shop Now</a>
+  </div>
+
+  <script src="shared.js"></script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fresh baked sweet breads from Forever Scents — 9 varieties including banana, lemon blueberry, pumpkin, and more. Ottawa Farmer's Market & Illinois shipping.">
+  <title>Fresh Baked Breads – Forever Scents</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .bread-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.85rem;
+    }
+    .bread-pill {
+      background: var(--white);
+      border: 1.5px solid rgba(61,31,110,0.1);
+      border-radius: var(--radius);
+      padding: 0.9rem 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      font-size: 0.9rem;
+      color: var(--deep);
+      font-weight: 600;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .bread-pill:hover {
+      border-color: var(--violet);
+      background: var(--pale);
+    }
+    .bread-pill .b-icon { font-size: 1.2rem; }
+
+    .bread-img-row {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+    .bread-img-row img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: var(--radius);
+    }
+
+    .market-note {
+      background: var(--grad);
+      border-radius: var(--radius);
+      padding: 2rem 1.5rem;
+      color: var(--white);
+      text-align: center;
+    }
+    .market-note h3 {
+      color: var(--white);
+      font-size: 1.3rem;
+      margin-bottom: 0.6rem;
+    }
+    .market-note p {
+      color: rgba(255,255,255,0.78);
+      font-size: 0.88rem;
+      line-height: 1.75;
+      margin-bottom: 1.25rem;
+    }
+
+    .shipping-note {
+      background: var(--pale);
+      border: 1.5px solid var(--violet);
+      border-radius: var(--radius);
+      padding: 1.1rem 1.25rem;
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+      font-size: 0.86rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+    .shipping-note .s-icon { font-size: 1.2rem; flex-shrink: 0; }
+    .shipping-note strong { color: var(--deep); }
+
+    @media (min-width: 768px) {
+      .bread-img-row { grid-template-columns: repeat(3, 1fr); }
+      .bread-img-row img { height: 260px; }
+    }
+  </style>
+</head>
+<body class="page-body">
+
+  <div class="page-hero">
+    <h1>Fresh Baked <em style="color:var(--gold-lt);">Sweet Breads</em></h1>
+    <p>Homemade with love in Ottawa, Illinois — nine delicious varieties baked fresh for the farmer's market and available for Illinois shipping.</p>
+  </div>
+
+  <section class="content-section bg-white">
+    <div class="content-inner-wide">
+
+      <!-- PHOTO GALLERY -->
+      <div class="bread-img-row" style="margin-bottom:2.5rem;">
+        <img src="https://www.forever-scents.com/images/breads/breads-with-fruits.jpg" alt="Fresh baked sweet breads with fruit" loading="lazy">
+        <img src="https://www.forever-scents.com/images/breads/bread-on-stand.jpg" alt="Bread on a display stand" loading="lazy">
+        <img src="https://www.forever-scents.com/images/breads/bread-sign.jpg" alt="Forever Scents bread sign at farmer's market" loading="lazy">
+      </div>
+
+      <div class="grid-2" style="gap:2rem; align-items:start;">
+
+        <div>
+          <span class="section-label" style="margin-bottom:1rem;display:block;">Available Varieties</span>
+          <div class="bread-grid">
+            <div class="bread-pill"><span class="b-icon">🍎</span> Apple Cinnamon</div>
+            <div class="bread-pill"><span class="b-icon">🍌</span> Banana</div>
+            <div class="bread-pill"><span class="b-icon">🫐</span> Blueberry Banana</div>
+            <div class="bread-pill"><span class="b-icon">🍫</span> Chocolate Chip Banana</div>
+            <div class="bread-pill"><span class="b-icon">🍋</span> Lemon Blueberry</div>
+            <div class="bread-pill"><span class="b-icon">🌸</span> Lemon Poppyseed</div>
+            <div class="bread-pill"><span class="b-icon">🍍</span> Pineapple Zucchini w/ Walnuts</div>
+            <div class="bread-pill"><span class="b-icon">🎃</span> Pumpkin</div>
+            <div class="bread-pill"><span class="b-icon">🥒</span> Zucchini</div>
+          </div>
+        </div>
+
+        <div style="display:flex; flex-direction:column; gap:1.25rem;">
+
+          <div class="market-note">
+            <h3>🌽 Ottawa Farmer's Market</h3>
+            <p>Our breads are baked fresh every Saturday morning for the Ottawa Farmer's Market. Come find us and sample before you buy!</p>
+            <a href="contact-us.html" class="btn btn-gold">Ask About Market Dates</a>
+          </div>
+
+          <div class="shipping-note">
+            <span class="s-icon">📦</span>
+            <p><strong>Illinois residents only</strong> — we currently ship breads within Illinois. To order for shipping, email us at <a href="mailto:foreverscents2010@gmail.com" style="color:var(--violet);">foreverscents2010@gmail.com</a> and we'll get you taken care of.</p>
+          </div>
+
+          <div class="shipping-note" style="border-color:var(--gold);">
+            <span class="s-icon">🎁</span>
+            <p><strong>Looking for a gift?</strong> Our breads pair beautifully with a soy candle or wax melt set. <a href="contact-us.html" style="color:var(--violet);">Contact us</a> to put together a custom gift bundle.</p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ORDER CTA -->
+  <section class="content-section bg-pale" style="padding-top:2rem; padding-bottom:2.5rem;">
+    <div class="content-inner" style="text-align:center;">
+      <h2 class="section-title" style="margin-bottom:0.75rem;">Ready to order?</h2>
+      <p style="color:var(--muted); font-size:0.92rem; margin-bottom:1.5rem; max-width:440px; margin-left:auto; margin-right:auto;">
+        Send us an email with the variety (or varieties!) you'd like and we'll get everything sorted out for you.
+      </p>
+      <div style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap;">
+        <a href="mailto:foreverscents2010@gmail.com" class="btn btn-purple">Email to Order Breads</a>
+        <a href="order-online.html" class="btn btn-outline-purple">Browse Candles &amp; Melts</a>
+      </div>
+    </div>
+  </section>
+
+  <script src="shared.js"></script>
+</body>
+</html>

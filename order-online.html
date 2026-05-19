@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Order Forever Scents handmade soy candles and wax melts online. Over 60 fragrances available. Ships in 5–7 business days.">
+  <title>Order Online – Forever Scents</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .order-info-bar {
+      background: var(--pale);
+      border-bottom: 2px solid var(--violet);
+      padding: 1rem 1.25rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 2rem;
+      justify-content: center;
+      font-size: 0.78rem;
+    }
+    .order-info-bar .oi {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: var(--deep);
+      font-weight: 600;
+    }
+
+    /* PayPal embed area */
+    .paypal-zone {
+      background: var(--white);
+      border: 2px dashed rgba(61,31,110,0.18);
+      border-radius: var(--radius);
+      padding: 3rem 1.5rem;
+      text-align: center;
+      color: var(--muted);
+    }
+    .paypal-zone .pz-icon { font-size: 2.5rem; margin-bottom: 0.75rem; }
+    .paypal-zone h3 {
+      font-size: 1.1rem; color: var(--deep);
+      margin-bottom: 0.5rem;
+    }
+    .paypal-zone p { font-size: 0.85rem; line-height: 1.7; max-width: 380px; margin: 0 auto 1.25rem; }
+
+    .custom-note {
+      background: var(--grad);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      color: var(--white);
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .custom-note p { color: rgba(255,255,255,0.82); font-size:0.88rem; line-height:1.7; margin-bottom:1rem; }
+    .custom-note h3 { color: var(--white); margin-bottom:0.4rem; font-size:1.1rem; }
+  </style>
+</head>
+<body class="page-body">
+
+  <div class="page-hero">
+    <h1>Order <em style="color:var(--gold-lt);">Online</em></h1>
+    <p>Over 60 fragrances available in candles and wax melts. Handmade in Ottawa, Illinois and shipped right to your door.</p>
+  </div>
+
+  <!-- ORDER INFO BAR -->
+  <div class="order-info-bar">
+    <div class="oi">📦 Ships in 5–7 Business Days</div>
+    <div class="oi">🌿 100% Soy Wax</div>
+    <div class="oi">✋ Handmade in Illinois</div>
+    <div class="oi">💳 Secure Checkout via PayPal</div>
+  </div>
+
+  <section class="content-section bg-white">
+    <div class="content-inner-wide">
+
+      <!-- ═══════════════════════════════════════════════
+           PASTE YOUR PAYPAL PRODUCT CATALOG EMBED BELOW
+           ═══════════════════════════════════════════════ -->
+      <div class="paypal-zone" id="paypal-catalog">
+        <div class="pz-icon">🛍️</div>
+        <h3>Product Catalog Goes Here</h3>
+        
+        <a href="https://www.paypal.com/buttons/" target="_blank" rel="noopener" class="btn btn-purple">Go to PayPal Button Manager</a>
+      </div>
+      <!-- ═══════════════════════════════════════════════ -->
+
+      <div class="custom-note">
+        <h3>✨ Don't see your scent?</h3>
+        <p>We carry over 60 fragrances and can create custom scents on request. If something isn't listed, just reach out — we'd love to make it for you.</p>
+        <a href="contact-us.html" class="btn btn-gold">Request a Custom Scent</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SHIPPING INFO -->
+  <section class="content-section bg-pale" style="padding-top:2rem; padding-bottom:2.5rem;">
+    <div class="content-inner">
+      <span class="section-label" style="margin-bottom:1.25rem; display:block;">Shipping Information</span>
+      <ul class="checklist">
+        <li><span class="ck-icon">📦</span> Orders ship within 5–7 business days of placement</li>
+        <li><span class="ck-icon">🌡️</span> Summer orders: candles may soften slightly in heat — they re-harden without affecting quality. Order early in the week when possible.</li>
+        <li><span class="ck-icon">🇺🇸</span> Candles and wax melts ship anywhere in the USA</li>
+        <li><span class="ck-icon">🌽</span> Prefer to skip shipping? Find us at the Ottawa Farmer's Market!</li>
+        <li><span class="ck-icon">✉️</span> Questions? <a href="mailto:foreverscents2010@gmail.com" style="color:var(--violet);">Email us</a> anytime</li>
+      </ul>
+    </div>
+  </section>
+
+  <script src="shared.js"></script>
+</body>
+</html>

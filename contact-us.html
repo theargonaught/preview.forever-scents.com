@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Forever Scents — custom candle orders, questions about shipping, or just saying hello. We're based in Ottawa, Illinois.">
+  <title>Contact Us – Forever Scents</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .contact-card {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      padding: 1.4rem;
+    }
+    .cc-icon {
+      font-size: 1.6rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .cc-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--violet);
+      margin-bottom: 0.2rem;
+    }
+    .cc-value {
+      font-size: 0.92rem;
+      color: var(--deep);
+      font-weight: 600;
+    }
+    .cc-value a {
+      color: var(--violet);
+      text-decoration: none;
+    }
+    .cc-value a:hover { text-decoration: underline; }
+    .cc-note {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 0.2rem;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body class="page-body">
+
+  <div class="page-hero">
+    <h1>Get In <em style="color:var(--gold-lt);">Touch</em></h1>
+    <p>Custom scent requests, bread orders, shipping questions, or just want to say hi — we'd love to hear from you.</p>
+  </div>
+
+  <section class="content-section bg-white">
+    <div class="content-inner-wide">
+      <div class="grid-2" style="gap:2.5rem; align-items:start;">
+
+        <!-- CONTACT INFO -->
+        <div>
+          <span class="section-label" style="margin-bottom:1.25rem; display:block;">Reach Us Directly</span>
+
+          <div style="display:flex; flex-direction:column; gap:0.85rem; margin-bottom:2rem;">
+
+            <div class="card contact-card">
+              <span class="cc-icon">✉️</span>
+              <div>
+                <p class="cc-label">Email</p>
+                <p class="cc-value"><a href="mailto:foreverscents2010@gmail.com">foreverscents2010@gmail.com</a></p>
+                <p class="cc-note">Best way to reach us. We typically respond within 1–2 business days.</p>
+              </div>
+            </div>
+
+            <div class="card contact-card">
+              <span class="cc-icon">📦</span>
+              <div>
+                <p class="cc-label">Shipping</p>
+                <p class="cc-value">Ships in 5–7 Business Days</p>
+                <p class="cc-note">Candles and melts ship anywhere in the USA. Breads ship to Illinois residents only.</p>
+              </div>
+            </div>
+
+            <div class="card contact-card">
+              <span class="cc-icon">🌽</span>
+              <div>
+                <p class="cc-label">In Person</p>
+                <p class="cc-value">Ottawa Farmer's Market</p>
+                <p class="cc-note">Ottawa, Illinois — find us there during the summer season every Saturday morning.</p>
+              </div>
+            </div>
+
+            <div class="card contact-card">
+              <span class="cc-icon">📍</span>
+              <div>
+                <p class="cc-label">Location</p>
+                <p class="cc-value">Ottawa, Illinois</p>
+                <p class="cc-note">All candles, melts, and breads are handmade right here locally.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- CUSTOM ORDER CALLOUT -->
+          <div style="background:var(--grad); border-radius:var(--radius); padding:1.75rem; color:var(--white);">
+            <h3 style="color:var(--white); font-size:1.2rem; margin-bottom:0.5rem;">✨ Custom Scent Requests</h3>
+            <p style="color:rgba(255,255,255,0.8); font-size:0.87rem; line-height:1.75; margin-bottom:1.1rem;">
+              Don't see the scent you're looking for? We can make it! Just email us with your request — let us know if you want a candle, a wax melt, or both — and we'll work with you to get it exactly right.
+            </p>
+            <a href="mailto:foreverscents2010@gmail.com?subject=Custom Scent Request" class="btn btn-gold">Request a Custom Scent</a>
+          </div>
+
+        </div>
+
+        <!-- CONTACT FORM -->
+        <div>
+          <span class="section-label" style="margin-bottom:1.25rem; display:block;">Send Us a Message</span>
+          <div style="background:var(--off-white); border-radius:var(--radius); padding:1.75rem;">
+            <form class="contact-form" onsubmit="handleSubmit(event)">
+
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Jane Smith" required>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="jane@example.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="subject">What's this about?</label>
+                <select id="subject" name="subject">
+                  <option value="">Select a topic…</option>
+                  <option value="order">Place an Order</option>
+                  <option value="custom">Custom Scent Request</option>
+                  <option value="bread">Bread Order</option>
+                  <option value="shipping">Shipping Question</option>
+                  <option value="other">Something Else</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Tell us what you're looking for…" required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-purple" style="width:100%; justify-content:center;">Send Message</button>
+
+              <p style="font-size:0.75rem; color:var(--muted); text-align:center; margin-top:0.5rem;">
+                This form sends directly to our email. We'll reply within 1–2 business days.
+              </p>
+
+            </form>
+            <div id="form-success" style="display:none; text-align:center; padding:2rem;">
+              <p style="font-size:1.5rem; margin-bottom:0.5rem;">✅</p>
+              <h3 style="margin-bottom:0.4rem;">Message Sent!</h3>
+              <p style="font-size:0.88rem; color:var(--muted);">Thanks for reaching out. We'll be in touch within 1–2 business days.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <script src="shared.js"></script>
+  <script>
+    function handleSubmit(e) {
+      e.preventDefault();
+      const form = e.target;
+      const name    = form.name.value;
+      const email   = form.email.value;
+      const subject = form.subject.value;
+      const message = form.message.value;
+
+      // Build mailto link
+      const mailtoSubject = encodeURIComponent('Forever Scents Website Inquiry' + (subject ? ' — ' + subject : ''));
+      const mailtoBody    = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
+      window.location.href = `mailto:foreverscents2010@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`;
+
+      // Show success message
+      form.style.display = 'none';
+      document.getElementById('form-success').style.display = 'block';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Forever Scents – Handmade soy candles, wax melts & fresh baked breads crafted in Ottawa, Illinois. Custom scents available. Ships in 5–7 days.">
+  <title>Forever Scents – Handmade Soy Candles & Breads | Ottawa, IL</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ── HOME-SPECIFIC ── */
+
+    /* HERO */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr;
+      min-height: calc(100svh - var(--nav-h));
+    }
+    .hero-img {
+      height: 52vw;
+      min-height: 220px;
+      max-height: 420px;
+      overflow: hidden;
+      background: var(--pale);
+    }
+    .hero-img img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    .hero-text {
+      background: var(--grad);
+      padding: 2.5rem 1.25rem 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-text::before {
+      content: '';
+      position: absolute;
+      width: 300px; height: 300px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(201,170,219,0.2) 0%, transparent 70%);
+      top: -80px; right: -80px; pointer-events: none;
+    }
+    .hero-eyebrow {
+      font-size: 0.65rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--gold-lt);
+      margin-bottom: 0.85rem;
+    }
+    .hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.2rem, 8vw, 3.8rem);
+      color: var(--white);
+      line-height: 1.08;
+      margin-bottom: 1rem;
+    }
+    .hero-title em { font-style: italic; color: var(--gold-lt); }
+    .hero-body {
+      font-size: 0.93rem;
+      color: rgba(255,255,255,0.76);
+      line-height: 1.8;
+      margin-bottom: 2rem;
+      max-width: 480px;
+    }
+    .hero-btns { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+
+    /* PRODUCT CARDS */
+    .pc-img {
+      height: 210px;
+      overflow: hidden;
+      background: var(--pale);
+      position: relative;
+    }
+    .pc-img img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s;
+    }
+    .card:hover .pc-img img { transform: scale(1.07); }
+    .pc-badge {
+      position: absolute;
+      top: 0.65rem; left: 0.65rem;
+      background: var(--grad);
+      color: var(--white);
+      font-size: 0.58rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 700;
+      padding: 0.28rem 0.7rem;
+      border-radius: 50px;
+    }
+    .pc-body { padding: 1.2rem 1.25rem 1.4rem; }
+    .pc-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem; font-weight: 600;
+      color: var(--deep); margin-bottom: 0.4rem;
+    }
+    .pc-desc {
+      font-size: 0.83rem; color: var(--muted);
+      line-height: 1.65; margin-bottom: 1rem;
+    }
+    .pc-link {
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--violet);
+      text-decoration: none;
+      border-bottom: 1.5px solid var(--lavender);
+      padding-bottom: 2px;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .pc-link:hover { color: var(--deep); border-color: var(--violet); }
+
+    /* MARKET BANNER */
+    .market-banner {
+      background: var(--pale);
+      border-top: 3px solid var(--violet);
+      padding: 1.75rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .mb-row {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .mb-icon { font-size: 2.2rem; line-height: 1; }
+    .mb-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem; font-weight: 600;
+      color: var(--deep);
+      display: block;
+    }
+    .mb-sub { font-size: 0.82rem; color: var(--muted); }
+    .mb-note { font-size: 0.82rem; color: var(--muted); line-height: 1.6; }
+
+    /* CUSTOM SECTION */
+    .custom-section {
+      background: var(--grad);
+      padding: 3rem 1.25rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .custom-section::after {
+      content: '❝';
+      position: absolute;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 14rem;
+      line-height: 1;
+      color: rgba(255,255,255,0.04);
+      bottom: -2rem; right: 0.5rem;
+      pointer-events: none;
+    }
+    .custom-section .section-label { color: var(--gold-lt); }
+    .custom-section h2 {
+      font-size: clamp(1.8rem, 5vw, 2.6rem);
+      color: var(--white); margin-bottom: 1rem;
+    }
+    .custom-section h2 em { font-style: italic; color: var(--gold-lt); }
+    .custom-section p {
+      color: rgba(255,255,255,0.76);
+      font-size: 0.93rem; line-height: 1.82;
+      margin-bottom: 1.75rem;
+      max-width: 520px;
+    }
+
+    /* WHY SOY */
+    .why-card {
+      padding: 1.5rem 1.25rem;
+      text-align: center;
+    }
+    .why-icon { font-size: 1.8rem; margin-bottom: 0.7rem; display: block; }
+    .why-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.05rem; font-weight: 600;
+      color: var(--deep); margin-bottom: 0.4rem;
+    }
+    .why-card p { font-size: 0.82rem; color: var(--muted); line-height: 1.65; }
+
+    @media (min-width: 768px) {
+      .hero {
+        grid-template-columns: 1fr 1fr;
+        min-height: calc(100vh - var(--nav-h));
+      }
+      .hero-img { height: auto; max-height: none; }
+      .hero-text { padding: 4rem 3.5rem 4rem 4rem; }
+      .market-banner {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem 3rem;
+      }
+      .custom-section { padding: 5rem 3rem; }
+    }
+  </style>
+</head>
+<body class="page-body">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text fade-up">
+      <p class="hero-eyebrow">Handmade in Ottawa, Illinois</p>
+      <h1 class="hero-title">Fragrances for <em>every</em> season of life</h1>
+      <p class="hero-body">Small-batch soy candles and wax melts crafted by hand — clean-burning, long-lasting, and made with love. Custom scents always available.</p>
+      <div class="hero-btns">
+        <a href="order-online.html" class="btn btn-gold">Shop Now</a>
+        <a href="contact-us.html" class="btn btn-outline-white">Custom Scents</a>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="https://www.forever-scents.com/images/navy-blue.jpg" alt="Forever Scents handmade soy candle" loading="eager">
+    </div>
+  </section>
+
+  <!-- TRUST STRIP -->
+  <div class="trust-strip">
+    <div class="ti"><span class="ti-dot"></span>100% Soy Wax</div>
+    <div class="ti"><span class="ti-dot"></span>Handmade in Illinois</div>
+    <div class="ti"><span class="ti-dot"></span>Custom Scents Welcome</div>
+    <div class="ti"><span class="ti-dot"></span>Ships in 5–7 Days</div>
+    <div class="ti"><span class="ti-dot"></span>Fresh Baked Breads</div>
+  </div>
+
+  <!-- PRODUCTS -->
+  <section class="content-section bg-pale">
+    <div class="content-inner-wide">
+      <div class="section-center" style="margin-bottom:2rem;">
+        <span class="section-label">Our Collection</span>
+        <h2 class="section-title">Find your <em>favorite</em></h2>
+      </div>
+      <div class="grid-3">
+
+        <div class="card">
+          <div class="pc-img">
+            <img src="https://www.forever-scents.com/images/melts.jpg" alt="Soy Wax Melts" loading="lazy">
+            <span class="pc-badge">Bestseller</span>
+          </div>
+          <div class="pc-body">
+            <h3 class="pc-name">Soy Wax Melts</h3>
+            <p class="pc-desc">Long-lasting, clean-burning wax melts in dozens of seasonal and year-round fragrances. Great scent throw — no flame needed.</p>
+            <a href="order-online.html" class="pc-link">Shop Melts →</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="pc-img">
+            <img src="https://www.forever-scents.com/images/navy-blue.jpg" alt="Handmade Soy Candles" loading="lazy">
+            <span class="pc-badge">Fan Favorite</span>
+          </div>
+          <div class="pc-body">
+            <h3 class="pc-name">Soy Candles</h3>
+            <p class="pc-desc">Handpoured soy candles that burn up to 50% longer than paraffin with 90% less soot. Beautiful for your home.</p>
+            <a href="order-online.html" class="pc-link">Shop Candles →</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="pc-img">
+            <img src="https://www.forever-scents.com/images/breads/breads-with-fruits.jpg" alt="Fresh Baked Sweet Breads" loading="lazy">
+            <span class="pc-badge">Farmer's Market Pick</span>
+          </div>
+          <div class="pc-body">
+            <h3 class="pc-name">Fresh Baked Breads</h3>
+            <p class="pc-desc">Nine varieties of homemade sweet breads baked fresh for the Ottawa Farmer's Market. Illinois shipping available.</p>
+            <a href="breads.html" class="pc-link">See Varieties →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FARMER'S MARKET BANNER -->
+  <div class="market-banner">
+    <div class="mb-row">
+      <span class="mb-icon">🌽</span>
+      <div>
+        <span class="mb-title">Find us at the Ottawa Farmer's Market</span>
+        <span class="mb-sub">Ottawa, Illinois · Fresh candles, melts &amp; breads every market day</span>
+      </div>
+    </div>
+    <p class="mb-note">Can't make it? <strong>Order online</strong> — ships in 5–7 business days.</p>
+  </div>
+
+  <!-- CUSTOM ORDER -->
+  <section class="custom-section">
+    <div class="content-inner">
+      <span class="section-label">Made Just For You</span>
+      <h2>Can't find your <em>perfect</em> scent?</h2>
+      <p>We'll make it. If a scent isn't listed or you have something specific in mind, we create custom soy candles and wax melts on request. Just reach out and we'll get it exactly right.</p>
+      <a href="contact-us.html" class="btn btn-gold">Request a Custom Scent</a>
+    </div>
+  </section>
+
+  <!-- WHY SOY -->
+  <section class="content-section bg-cream">
+    <div class="content-inner-wide">
+      <div class="section-center" style="margin-bottom:2rem;">
+        <span class="section-label">The Difference Is Real</span>
+        <h2 class="section-title">Why <em>soy</em> wax?</h2>
+      </div>
+      <div class="grid-4">
+        <div class="card why-card">
+          <span class="why-icon">🌱</span>
+          <h3>Natural &amp; Clean</h3>
+          <p>Made from soybeans — a renewable resource. Non-toxic, biodegradable, and water soluble.</p>
+        </div>
+        <div class="card why-card">
+          <span class="why-icon">⏱️</span>
+          <h3>Burns Longer</h3>
+          <p>Burns up to 50% slower than paraffin. Our 9 oz candles burn 40–50 hours.</p>
+        </div>
+        <div class="card why-card">
+          <span class="why-icon">💨</span>
+          <h3>90% Less Soot</h3>
+          <p>Dramatically cleaner burn means no black soot on your walls, jars, or in your air.</p>
+        </div>
+        <div class="card why-card">
+          <span class="why-icon">🇺🇸</span>
+          <h3>Supports Farmers</h3>
+          <p>Soy wax is grown in the USA. Every candle supports American soybean farmers.</p>
+        </div>
+      </div>
+      <div style="text-align:center; margin-top:2rem;">
+        <a href="why-buy-soy.html" class="btn btn-outline-purple">Learn More About Soy</a>
+      </div>
+    </div>
+  </section>
+
+  <script src="shared.js"></script>
+</body>
+</html>
